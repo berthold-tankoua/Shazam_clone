@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shazam Style - Audio Recognizer</title>
+    <title>Shazam | Audio Recognizer</title>
+    <meta name="description"
+        content="Découvrez notre application de reconnaissance musicale inspirée de Shazam. Enregistrez un extrait sonore et obtenez instantanément le titre, l'artiste et les liens pour écouter sur Spotify ou Apple Music. Essayez dès maintenant !">
+
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Favicons -->
+    <link href="{{ asset('logo.png') }}" rel="icon">
+    <link href="{{ asset('logo.png') }}" rel="apple-touch-icon">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -157,7 +163,7 @@
 
 <body>
 
-    <div class="container" id="mainContainer">
+    <main class="container" id="mainContainer">
         <h1>SHAZAM CLONE</h1>
 
         <div class="shazam-outer">
@@ -165,7 +171,7 @@
             <div class="pulse-ring"></div>
             <div class="pulse-ring"></div>
 
-            <button class="record-btn" id="recordBtn">
+            <button class="record-btn" id="recordBtn" title="Appuyez pour identifier">
                 <i class="fa-solid fa-music" id="mainIcon"></i>
             </button>
         </div>
@@ -173,7 +179,7 @@
         <div class="status" id="status">Touchez pour identifier</div>
 
         <audio id="audioPlayback" controls></audio>
-    </div>
+    </main>
     <script>
         $.ajaxSetup({
             headers: {

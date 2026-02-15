@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $result['artist'] }} | {{ $result['title'] }}</title>
+    <meta name="description"
+        content="Découvrez notre application de reconnaissance musicale inspirée de Shazam. Enregistrez un extrait sonore et obtenez instantanément le titre, l'artiste et les liens pour écouter sur Spotify ou Apple Music. Essayez dès maintenant !">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="{{ asset('logo.png') }}" rel="icon">
+    <link href="{{ asset('logo.png') }}" rel="apple-touch-icon">
     <style>
         :root {
             --primary-purple: #6a5acd;
@@ -248,8 +252,8 @@
 <body>
     <div class="hero-section">
         <div class="top-nav">
-            <i class="fas fa-arrow-left"></i>
-            <div style="display:flex; gap: 20px; align-items: center;">
+            <a href="{{ url('/') }}" title="Retour à l'accueil"><i class="fas fa-arrow-left"></i></a>
+            <div style="display:flex; gap: 20px; align-items: center;" title="indisponible pour le moment">
                 <span style="font-size: 0.8rem; font-weight: bold;"><i class="fas fa-list"></i> LYRICS</span>
                 <i class="fas fa-ellipsis-v"></i>
             </div>
